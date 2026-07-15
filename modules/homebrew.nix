@@ -41,6 +41,7 @@
       "nikitabobko/tap/aerospace"
       "d12frosted/emacs-plus/emacs-plus-app"
       "ghostty"
+      "keeper-password-manager"
       "librewolf"
       "mactex-no-gui"
       "mullvad-vpn"
