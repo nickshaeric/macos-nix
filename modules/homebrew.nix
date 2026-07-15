@@ -39,7 +39,7 @@
 
     # Casks
     casks = [
-      "nikitabobko/aerospace"
+      "nikitabobko/tap/aerospace"
       "d12frosted/emacs-plus-app"
       "ghostty"
       "librewolf"
