@@ -19,7 +19,9 @@
       formulae = [ ];
       casks = [ ];
       commands = [ ];
-      taps = [ ];
+      taps = [
+        "nikitabobko/tap"
+      ];
     };
   };
 
