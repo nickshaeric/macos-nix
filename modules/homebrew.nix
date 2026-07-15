@@ -35,6 +35,9 @@
     # Casks
     casks = [
       "ghostty"
+      "librewolf"
+      "mullvad-vpn"
+      "sioyek"
     ];
   };
 }
