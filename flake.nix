@@ -7,34 +7,12 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
-  let
-    configuration = { pkgs, ... }: {
-      environment.systemPackages =
-        [ 
-          pkgs.neovim
-        ];
-
-      nix.settings.experimental-features = "nix-command flakes";
-     
-      # nix-darwin & determinate compatability
-      nix.enable = false;
-
-      # Set Git commit hash for darwin-version.
-      system.configurationRevision = self.rev or self.dirtyRev or null;
-
-      # Used for backwards compatibility, please read the changelog before changing.
-      # $ darwin-rebuild changelog
-      system.stateVersion = 6;
-
-      nixpkgs.hostPlatform = "aarch64-darwin";
-    };
-  in
-  {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#macbook
+  outputs = inputs@{ self, nix-darwin, nixpkgs }: {
     darwinConfigurations."macbook" = nix-darwin.lib.darwinSystem {
-      modules = [ configuration ];
+      specialArgs = { inherit self; };
+      modules = [
+        ./hosts/macbook/default.nix
+      ];
     };
   };
 }
