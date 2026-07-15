@@ -17,12 +17,11 @@
     # Optional: Declarative Homebrew tap trust entries
     trust = {
       formulae = [ ];
-      casks = [
-        "d12frosted/emacs-plus/emacs-plus-app"
-      ];
+      casks = [ ];
       commands = [ ];
       taps = [
         "nikitabobko/tap"
+	"d12frosted/emacs-plus"
       ];
     };
   };
