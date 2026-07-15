@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   environment.systemPackages = [
     pkgs.curl
-    pkgs.fetch
+    pkgs.fastfetch
     pkgs.git
     pkgs.neovim
     pkgs.stow
