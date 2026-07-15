@@ -8,6 +8,8 @@
     taps = {
       "homebrew/homebrew-core" = inputs.homebrew-core;
       "homebrew/homebrew-cask" = inputs.homebrew-cask;
+      "nikitabobko/homebrew-tap" = inputs.homebrew-nikitabobko;
+      "d12frsoted/homebrew-emacs-plus" = inputs.homebrew-emacs-plus;
     };
     
     mutableTaps = false;
@@ -34,10 +36,14 @@
 
     # Casks
     casks = [
+      "aerospace"
+      "emacs-plus-app"
       "ghostty"
       "librewolf"
       "mullvad-vpn"
+      "roblox"
       "sioyek"
+      "font-jetbrains-maple-mono-nf"
     ];
   };
 }

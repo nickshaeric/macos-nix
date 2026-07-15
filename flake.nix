@@ -19,6 +19,18 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+
+    # macos-emacs
+    homebrew-emacs-plus = {
+      url = "github:d12frosted/homebrew-emacs-plus";
+      flake = false;
+    };
+
+    # aerospace (wm)
+    homebrew-nikitabobko = {
+      url = "github:nikitabobko/homebrew-tap";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, ... }: {
