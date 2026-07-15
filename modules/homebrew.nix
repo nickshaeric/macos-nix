@@ -21,7 +21,7 @@
       commands = [ ];
       taps = [
         "nikitabobko/tap"
-        "d12frosted/emacs-plus"
+        "d12frosted/emacs-plus/emacs-plus-app"
       ];
     };
   };
