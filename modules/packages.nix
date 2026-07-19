@@ -2,6 +2,7 @@
   environment.systemPackages = [
     pkgs.coreutils
     pkgs.curl
+    pkgs.fd
     pkgs.git
     pkgs.neovim
     pkgs.pandoc
