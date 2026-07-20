@@ -1,4 +1,9 @@
 { self, pkgs, ... }: {
+  users.users.nicksha = {
+    name = "nicksha";
+    home = "/Users/nicksha";
+  };
+
   imports = [
     ../../modules/homebrew.nix
     ../../modules/packages.nix

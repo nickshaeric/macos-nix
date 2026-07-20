@@ -20,6 +20,10 @@
       flake = false;
     };
 
+    # home-manager
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
     # macos-emacs
     homebrew-emacs-plus = {
       url = "github:d12frosted/homebrew-emacs-plus";
@@ -33,12 +37,18 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, ... }: {
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager, ... }: {
     darwinConfigurations."macbook" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit self inputs; };
       modules = [
-        nix-homebrew.darwinModules.nix-homebrew
         ./hosts/macbook/default.nix
+        nix-homebrew.darwinModules.nix-homebrew
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.nicksha = import ./home.nix;
+        }
       ];
     };
   };
