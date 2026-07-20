@@ -12,6 +12,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    enableGlobalCompInit = false;
   };
 
   # Target architecture for apple silicon
