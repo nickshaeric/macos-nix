@@ -9,6 +9,11 @@
     ../../modules/packages.nix
   ];
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+  };
+
   # Target architecture for apple silicon
   nixpkgs.hostPlatform = "aarch64-darwin";
 

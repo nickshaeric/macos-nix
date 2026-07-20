@@ -1,14 +1,20 @@
-{ pkgs, ... }: {
-  environment.systemPackages = [
-    pkgs.coreutils
-    pkgs.curl
-    pkgs.fd
-    pkgs.neovim
-    pkgs.pandoc
-    pkgs.ripgrep
-    pkgs.shellcheck
-    pkgs.stow
-    pkgs.tmux
-    pkgs.tree
+{ pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    # Core Utilities
+    coreutils-prefixed
+    stow
+    
+    # Development & Tooling
+    fd
+    neovim
+    pandoc
+    ripgrep
+    shellcheck
+    tree-sitter
+    
+    # Networking & Utilities
+    curl
+    tmux
+    tree
   ];
 }
