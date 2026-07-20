@@ -1,4 +1,4 @@
-{ config, inputs, ... }: {
+{ inputs, ... }: {
   nix-homebrew = {
     enable = true;
     enableRosetta = true;
@@ -25,9 +25,9 @@
     enable = true;
 
     onActivation = {
-      cleanup = "zap";
       upgrade = true;
-      autoUpdate = false;
+      autoUpdate = true;
+      cleanup = "zap";
     };
 
     taps = [
@@ -40,6 +40,7 @@
     casks = [
       "nikitabobko/tap/aerospace"
       "d12frosted/emacs-plus/emacs-plus-app"
+      "font-jetbrains-maple-mono-nf"
       "ghostty"
       "keeper-password-manager"
       "librewolf"
@@ -47,7 +48,7 @@
       "mullvad-vpn"
       "roblox"
       "sioyek"
-      "font-jetbrains-maple-mono-nf"
+      "visual-studio-code"
     ];
   };
 }

@@ -1,4 +1,4 @@
-{ self, pkgs, ... }: {
+{ self, ... }: {
   users.users.nicksha = {
     name = "nicksha";
     home = "/Users/nicksha";
