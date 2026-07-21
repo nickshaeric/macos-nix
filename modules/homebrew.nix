@@ -10,7 +10,7 @@
       "nikitabobko/homebrew-tap" = inputs.homebrew-nikitabobko;
       "d12frosted/homebrew-emacs-plus" = inputs.homebrew-emacs-plus;
     };
-    
+
     mutableTaps = false;
 
     trust = {
@@ -48,7 +48,7 @@
       "mullvad-vpn"
       "roblox"
       "sioyek"
-      "visual-studio-code"
+      "vscodium"
     ];
   };
 }
